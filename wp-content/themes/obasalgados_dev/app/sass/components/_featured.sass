@@ -1,0 +1,86 @@
+#featured
+	background-color: $blue
+	padding: 90px 120px
+	+clearfix
+	color: #fff
+	+breakpoint($tablet)
+		padding: 30px
+	.featured-container
+		+shadow-3
+		.about-us
+			+flex
+			.block
+				+make(6,6,12)
+				background-color: $red
+				padding: 60px 30px
+				background-repeat: no-repeat
+				background-position: 200px
+			.title
+				font-family: $sub-font
+				font-weight: $medium
+				text-transform: uppercase
+				+font-size(41px)
+				letter-spacing: -2px
+			.text
+				line-height: 2
+			.block.img
+				padding: 0
+			.block-about-us
+				display: flex
+				flex-flow: column
+				justify-content: center
+		.order
+			padding: 60px 120px
+			+breakpoint($tablet)
+				padding: 30px
+				text-align: center
+			background-color: $dark
+			+clearfix
+			+flex
+			+center
+			background-repeat: no-repeat
+			background-position-x: 30px
+			.box
+				+make(6,6,12)
+			.box.price
+				+font-size(80px)
+				font-weight: medium
+				line-height: 1
+				font-family: $sub-font
+				+breakpoint($tablet)
+					+font-size(60px)
+				span
+					font-weight: $light
+			.box.button
+				background-color: transparent
+				text-align: center
+				+breakpoint($tablet)
+					margin-top: 60px
+				.go-button
+					+font-size(24px)
+					letter-spacing: -1px
+		.steps
+			+clearfix
+			.box
+				+make(4,4,12)
+				padding: 30px
+				height: 300px
+				+flex
+				flex-flow: wrap
+				background-repeat: no-repeat
+				background-position-x: right
+				background-position-y: center
+				.title
+					font-weight: $medium
+					+font-size(30px)
+					font-family: $sub-font
+					line-height: 1
+					letter-spacing: -1px
+				.text
+					align-self: flex-end
+				&:nth-child(1)
+					background-color: $red
+				&:nth-child(2)
+					background-color: $green
+				&:nth-child(3)
+					background-color: $yellow

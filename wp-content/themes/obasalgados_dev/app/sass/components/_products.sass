@@ -1,0 +1,27 @@
+.go-products
+	.products
+		+clearfix
+		.product
+			+make(3,6,12)
+			+background
+			padding: 0
+			background-color: $red
+			height: 250px
+			figcaption
+				height: 100%
+				background-color: rgba(244, 157, 55, 0.83)
+				color: #fff
+				padding: 15px
+				+flex
+				align-items: flex-end
+				opacity: 0
+				+transition(.2s)
+				&:hover
+					opacity: 1
+				.title
+					+font-size(21px)
+					font-weight: $bold
+	.options
+		padding: 30px 0px
+		text-align: center
+		+clearfix

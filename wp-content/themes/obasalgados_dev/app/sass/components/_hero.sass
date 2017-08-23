@@ -1,0 +1,46 @@
+.go-hero
+	height: 100vh
+	background-color: $dark
+	+background
+	&-left
+		+make(6,6,12)
+		height: 100%
+		padding: 0
+		.content
+			color: #fff
+			background-color: rgba(31, 39, 27, 0.87)
+			height: 100%
+			display: flex
+			flex-flow: column
+			justify-content: center
+			padding: 90px
+			+breakpoint($mobile)
+				padding: 30px
+			.title
+				+font-size(60px)
+				font-weight: $medium
+				font-family: $sub-font
+				line-height: 1
+				letter-spacing: -2px
+				text-transform: uppercase
+			.text
+				line-height: 2
+				padding: 30px 0px
+
+	&-right
+		+make(6,6,12)
+		height: 100%
+		.price-box
+			background-color: $red
+			color: #fff
+			+font-size(40px)
+			padding: 20px
+			padding-left: 80px
+			position: absolute
+			bottom: 90px
+			right: 90px
+			text-align: right
+			background-repeat: no-repeat
+			background-position: left center
+			span
+				font-weight: $black
