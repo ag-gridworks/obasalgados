@@ -5,5 +5,4 @@
 		<polygon points="1440,0 719,215.5 1440,215.5"></polygon>
 	</svg>
 	</div>
-	<div class="arrow"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-circle"></use></svg></div>
 </section>

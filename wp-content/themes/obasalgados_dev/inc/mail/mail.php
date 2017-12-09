@@ -23,8 +23,8 @@ require_once('secret.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 //$from = "email@cliente.com.br";
-$from = "joel.santos@madgo.com.br"; // debug
-$fromName = 'From name';
+$from = "contato@gridworks.com.br"; // debug
+$fromName = 'ZAAAAAAAZ';
 
 $host = $hostEmail;
 $username = $hostUsername;

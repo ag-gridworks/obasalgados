@@ -1,27 +1,45 @@
-<section class="go-products">
+<?php 
+$args = array(
+'post_type' => 'produtos',
+'posts_per_page' => -1
+);
+?>
 
-	<div class="products">
+<?php $the_query = new WP_Query( $args ); ?>
 
-	<?php $i = 0; while($i < 8): ?>
+<?php if ( $the_query->have_posts() ) : ?>
 
-	<figure class="product" style="
-	background-image: url('http://blog.ditalia.com/wp-content/uploads/2017/08/66317868-C555-45EB-B71B-B2CDE48061B5-400x400.jpg');
-	">
-		<figcaption>
-			<div class="title">
-				Salgado
-			</div>
-		</figcaption>
-	</figure>
+	<section class="go-products animated">
 
-	<?php $i++; endwhile ?>
-
+	<div class="title">
+		Nossos Salgados
 	</div>
 
-	<div class="options">
-		<div class="go-button blue">
-			Faça seu pedido
+	<div class="divider center"></div>
+
+		<div class="products">
+
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		
+			<figure class="product" style="
+			background-image: url('<?php the_field("product_image") ?>');
+			">
+				<figcaption>
+					<div class="title">
+						<?php the_title(); ?>
+					</div>
+
+					<?php $id = get_the_ID(); ?>
+
+					<button class="hide" id="<?php echo $id ?>" class="add-to-cart">
+					<input class="product_id" type="hidden" id="<?php echo $id ?>" data-name="<?php the_title() ?>">
+						Adicionar a cesta
+					</button>
+				</figcaption>
+			</figure>
+
+		<?php endwhile; ?>
+
 		</div>
-	</div>
-
-</section>
+	</section>
+<?php endif; ?>

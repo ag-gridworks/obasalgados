@@ -29,5 +29,42 @@ img
 	width: 100%
 	max-width: 100%
 
-.the-title
-	letter-spacing: -2px
+.triangle svg
+    width: 102%
+    height: 100%
+    max-height: 215px
+    left: 50%
+    -ms-transform: translateX(-50%)
+    transform: translateX(-50%)
+    fill: $featured-bg
+    position: absolute
+
+.scroll-more
+    height: 120px
+    clear: both
+    padding-bottom: 85px
+
+.triangle
+    height: 120px
+    width: 100%
+    overflow: hidden
+    transform: rotate(180deg) scaleX(-1)
+
+
+.go-title
+	+font-size(31px)
+	font-family: $sub-font
+	font-weight: $medium
+	text-transform: uppercase
+	color: $dark
+	text-align: center
+
+.response
+	display: none
+	margin-bottom: 10px
+	.message
+		display: none
+		text-align: center
+
+.modal
+	z-index: 999999

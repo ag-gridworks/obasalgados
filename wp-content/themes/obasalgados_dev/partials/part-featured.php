@@ -1,7 +1,7 @@
 <section id="featured">
-	<div class="featured-container">
+	<div class="featured-container animated">
 		<!-- About US -->
-		<article class="about-us">
+		<article class="about-us animated">
 			<div class="block block-about-us" style="
 				background-image: url('<?php the_field("icon") ?>');
 			">
@@ -23,7 +23,7 @@
 
 		<!-- Order -->
 		
-		<article class="order" style="
+		<article class="order animated" style="
 			background-image: url('<?php the_field("price_icon") ?>');
 		">
 			<div class="box price">
@@ -39,7 +39,7 @@
 
 		<!-- Steps -->
 
-		<article class="steps">
+		<article id="how-to" class="steps animated">
 			<div class="box" style="
 				background-image: url('<?php the_field("box-1-icon") ?>');
 			">
@@ -75,8 +75,6 @@
 					<?php the_field("box-3-text") ?>
 				</div>
 			</div>
-
-		
 		</article>
 	</div>
 </section>

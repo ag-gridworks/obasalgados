@@ -1,8 +1,36 @@
+.go-header
+	+clearfix
+	
 .navicon
 	background-color: $blue
-	padding: 10px
+	padding-top: 5px
 	color: #fff
 	position: fixed
 	right: 30px
 	top: 30px
 	z-index: 1000
+
+.hamburger
+	padding: 6px
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	background-color: #fff
+
+.go-navbar
+	padding: 15px 90px
+	width: 100%
+	position: fixed
+	z-index: 10000
+	background-color: $dark
+	color: #fff
+	+shadow-2
+	+breakpoint($tablet)
+		padding: 15px 31px
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+	.logo
+		a
+			img
+				width: 80px

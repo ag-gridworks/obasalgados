@@ -1,7 +1,11 @@
 <header class="go-header">
 	<nav class="go-navbar">
-		<div class="navicon">
-			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-		</div>
+		<ul>
+			<li class="logo">
+				<?php the_custom_logo(); ?>
+			</li>
+		</ul>
 	</nav>
 </header>
+
+<?php get_template_part( 'partials/part', 'orders' ); ?>

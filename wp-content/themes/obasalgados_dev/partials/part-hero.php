@@ -1,9 +1,10 @@
 <section class="go-hero" style="
 background-image: url('<?php the_field("hero_image") ?>');
 ">
-<div class="article go-hero-left">
+<div class="article go-hero-left wow slideInLeft">
 
 	<div class="content">
+		<div class="divider"></div>
 		<div class="title">
 			<?php the_field("hero_title") ?>
 		</div>
@@ -13,7 +14,8 @@ background-image: url('<?php the_field("hero_image") ?>');
 		</div>
 
 		<div class="options">
-			<div class="go-button">
+			<div class="go-button hvr-bounce-in go-to" data-href="#
+			how-to">
 				<?php the_field("button_text") ?>
 			</div>
 		</div>

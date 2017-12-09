@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var cleanCss = require('gulp-clean-css');
+var wait = require('gulp-wait');
 
 var fonts = [
     './vendors/font-awesome/fonts'
@@ -24,7 +25,8 @@ var css_src = [
     './vendors/font-awesome/css/font-awesome.min.css',
     './vendors/css/style.css',
     './vendors/owl.carousel/dist/assets/owl.carousel.min.css',
-    './vendors/owl.carousel/dist/assets/owl.theme.default.min.css'
+    './vendors/owl.carousel/dist/assets/owl.theme.default.min.css',
+    './vendors/hover/css/hover-min.css'
 ];
 
 gulp.task('pack-css', function () { 
@@ -36,6 +38,7 @@ gulp.task('pack-css', function () {
  
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.sass')
+    .pipe(wait(500))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./vendors/css/'));
 });
@@ -43,9 +46,12 @@ gulp.task('sass', function () {
 var js = [
     './vendors/jquery/dist/jquery.js',
     './vendors/wow/dist/wow.min.js',
+    './vendors/bootstrap/dist/js/bootstrap.min.js',
     './js/main.js',
     './js/*.js',
-    './vendors/owl.carousel/dist/owl.carousel.min.js'
+    './vendors/owl.carousel/dist/owl.carousel.min.js',
+    './vendors/jquery-validation/dist/jquery.validate.min.js',
+    './vendors/jquery-form/dist/jquery.form.min.js'
 ];
 
 gulp.task('uglify', function(){
